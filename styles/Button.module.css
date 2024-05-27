@@ -1,0 +1,50 @@
+/* Button Types */
+.button-primary {
+  background: theme("colors.primary");
+  color: theme("colors.white");
+}
+.button-primary svg {
+  color: theme("colors.white");
+}
+.button-danger {
+  background: theme("colors.danger");
+  color: theme("colors.white");
+}
+.button-danger svg {
+  color: theme("colors.white");
+}
+.button-default {
+  background: theme("colors.default");
+  color: theme("colors.dark-color-light");
+}
+.button-default svg {
+  color: theme("colors.dark-color-light");
+}
+.button-link {
+  background: transparent;
+  color: theme("colors.primary");
+}
+.button-link svg {
+  color: theme("colors.primary");
+}
+.icon-container {
+  padding: 4px;
+}
+/* Button Sizes */
+.button-small,
+.button-small svg {
+  font-size: theme("fontSize.xs");
+}
+
+.button-medium,
+.button-medium svg {
+  font-size: theme("fontSize.sm");
+}
+.button-large,
+.button-large svg {
+  font-size: theme("fontSize.lg");
+}
+.button-default,
+.button-default svg {
+  font-size: theme("fontSize.sm");
+}
