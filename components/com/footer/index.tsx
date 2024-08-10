@@ -10,14 +10,12 @@ import clsx from "clsx";
 interface Social {
   icon: string;
   link: string;
-  children?: React.ReactNode;
 }
 
 interface SectionItem {
   label: string;
   link?: string;
   icon?: string;
-  children?: React.ReactNode;
 }
 
 interface Section {
@@ -85,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ template }) => {
                     passHref
                   >
                     <div className="flex justify-center items-center bg-[#1E1E1E] h-[35px] w-[35px] sm:h-[40px] sm:w-[40px] text-white rounded-full">
-                      {IconComponent && <IconComponent {...social} />}
+                      {IconComponent && <IconComponent />}
                     </div>
                   </Link>
                 );
@@ -118,10 +116,7 @@ const Footer: React.FC<FooterProps> = ({ template }) => {
                           <div className="flex items-center gap-2">
                             {item.icon && (
                               <span className="flex items-center gap-2 h-[30px] w-[30px] text-white p-[4px]">
-                                {React.createElement(iconTypes[item.icon], {
-                                  ...item,
-                                  children: item.children,
-                                })}
+                                {React.createElement(iconTypes[item.icon])}
                               </span>
                             )}
                             <p className="text-[14px] text-background text-xs font-medium hover:font-normal">
@@ -133,10 +128,7 @@ const Footer: React.FC<FooterProps> = ({ template }) => {
                         <div className="flex items-center gap-2">
                           {item.icon && (
                             <span className="flex items-center gap-2 h-[30px] w-[30px] text-white p-[4px]">
-                              {React.createElement(iconTypes[item.icon], {
-                                ...item,
-                                children: item.children,
-                              })}
+                              {React.createElement(iconTypes[item.icon])}
                             </span>
                           )}
                           <p
