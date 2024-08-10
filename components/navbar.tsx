@@ -66,23 +66,16 @@ export const Navbar = ({ options }: { options: any }) => {
           <Link
             className="flex justify-start items-center gap-1 h-[64px]"
             href="/"
-            passHref={true}
-            legacyBehavior
+            passHref
           >
-            <a
-              href="/"
-              onClick={() => (setSelectedItem("/"), setIsMenuMobileOpen(false))}
-            >
-              <Image
-                src="/images/logo.png"
-                height={40}
-                width={220}
-                objectFit="contain"
-                objectPosition="center"
-                alt="logo"
-                className="main-logo-desktop"
-              />
-            </a>
+            <Image
+              src="/images/logo.png"
+              height={40}
+              width={220}
+              objectFit="contain"
+              objectPosition="center"
+              alt="logo"
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -93,17 +86,16 @@ export const Navbar = ({ options }: { options: any }) => {
             {navItems.map((item) =>
               !item.children ? (
                 <NavbarItem key={item.href}>
-                  <Link href={item.href} passHref={true} legacyBehavior>
-                    <a
+                  <Link href={item.href} passHref>
+                    <div
                       className={clsx(
                         selectedItem === item.href && "text-primary",
                         "font-semibold"
                       )}
                       onClick={() => setSelectedItem(item.href)}
-                      href={item.href}
                     >
                       {item.label}
-                    </a>
+                    </div>
                   </Link>
                 </NavbarItem>
               ) : (
@@ -185,50 +177,27 @@ export const Navbar = ({ options }: { options: any }) => {
           >
             {React.createElement(icon_types[navMenu.closeIcon])}
           </div>
-          <Link
-            className="flex justify-center"
-            href="/"
-            passHref={true}
-            legacyBehavior
-          >
-<<<<<<< HEAD
-            <a
-              href="/"
-              onClick={() => (setIsMenuMobileOpen(false), setSelectedItem("/"))}
-            >
-              <Image
-                src={navMenu.cover}
-                alt="navmenu cover"
-                objectFit="cover"
-                fill
-                width={140}
-                height={120}
-                className="main-logo-mobile"
-              />
-            </a>
-=======
+          <Link className="flex justify-center" href="/" passHref>
             <Image
               src={navMenu.cover}
               alt="navmenu cover"
               objectFit="cover"
               fill
               width={140}
-              height={140}
+              height={120}
               className="main-logo-mobile"
             />
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
           </Link>
           {navMenu.items.map((item: any, index: number) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               {!item.children ? (
-                <Link href={item.href} size="lg" passHref={true} legacyBehavior>
-                  <a
-                    href={item.href}
+                <Link href={item.href} size="lg" passHref>
+                  <div
                     className="text-black font-bold text-[24px] flex justify-between"
                     onClick={() => setIsMenuMobileOpen(false)}
                   >
                     {item.label}
-                  </a>
+                  </div>
                 </Link>
               ) : (
                 <div
@@ -237,7 +206,7 @@ export const Navbar = ({ options }: { options: any }) => {
                 >
                   <div className="flex w-full justify-between">
                     {item.label}
-                    <span className={isDropdownOpen ? " " : "-rotate-90"}>
+                    <span className={isDropdownOpen ? "" : "-rotate-90"}>
                       {React.createElement(icon_types["chevrondownicon"])}
                     </span>
                   </div>
@@ -247,11 +216,9 @@ export const Navbar = ({ options }: { options: any }) => {
                         <Link
                           href={link.href}
                           key={`${link.label}-${index}`}
-                          passHref={true}
-                          legacyBehavior
+                          passHref
                         >
-                          <a
-                            href={link.href}
+                          <div
                             className="text-black font-semibold text-[20px] pl-3"
                             onClick={() => (
                               setSelectedItem("/services"),
@@ -259,7 +226,7 @@ export const Navbar = ({ options }: { options: any }) => {
                             )}
                           >
                             {link.label}
-                          </a>
+                          </div>
                         </Link>
                       ))}
                     </div>

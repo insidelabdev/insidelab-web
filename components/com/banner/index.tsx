@@ -9,6 +9,7 @@ const Banner = ({ title, description, background, actions, ...props }: any) => {
   const icon_types: any = {
     ...icons,
   };
+
   return (
     <Wrapper {...props}>
       <div
@@ -25,38 +26,34 @@ const Banner = ({ title, description, background, actions, ...props }: any) => {
             dangerouslySetInnerHTML={{ __html: title }}
           />
           {actions.map((action: any, idx: number) => {
-            const { children } = action;
+            const { children, icon, label, link, type, className } = action;
+            const IconComponent = icon_types[icon];
+
             return (
               <Button
-                key={`${action}-${idx}`}
+                key={idx}  // Clave única basada en el índice
                 className={clsx(
                   "btn-action",
-                  action.type || "default",
+                  type || "default",
                   "xs:text-sm xs:py-4",
-                  action.className
+                  className
                 )}
-                color={action.type}
+                color={type}
               >
-                {action.link ? (
-                  <Link href={action.link} passHref legacyBehavior>
-                    <a
+                {link ? (
+                  <Link href={link} passHref>
+                    <div
                       className={clsx(
                         "link text-black font-bold",
                         "flex justify-start items-center gap-1",
                         "xs:text-sm xs:py-4",
-                        action.type
+                        type
                       )}
                     >
-                      {action.icon &&
-                        React.createElement(
-                          icon_types[action.icon],
-                          {
-                            ...action,
-                          },
-                          children
-                        )}
-                      {action.label}
-                    </a>
+                      {icon && IconComponent &&
+                        React.createElement(IconComponent, { ...action })}
+                      {label}
+                    </div>
                   </Link>
                 ) : (
                   <div
@@ -64,14 +61,12 @@ const Banner = ({ title, description, background, actions, ...props }: any) => {
                       "link text-black font-bold",
                       "flex justify-start items-center gap-1",
                       "xs:text-sm xs:py-4",
-                      action.type
+                      type
                     )}
                   >
-                    {action.icon &&
-                      React.createElement(icon_types[action.icon], {
-                        ...action,
-                      })}
-                    {action.label}
+                    {icon && IconComponent &&
+                      React.createElement(IconComponent, { ...action })}
+                    {label}
                   </div>
                 )}
               </Button>
@@ -82,4 +77,5 @@ const Banner = ({ title, description, background, actions, ...props }: any) => {
     </Wrapper>
   );
 };
+
 export default Banner;

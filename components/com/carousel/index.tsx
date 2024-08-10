@@ -116,18 +116,6 @@ const Carousel = ({
                     children
                   )}
                 {action.link ? (
-<<<<<<< HEAD
-                  <Link href={action.link} passHref legacyBehavior>
-                    <a
-                      className={clsx(
-                        "link text-black font-bold",
-                        "flex justify-start items-center gap-1",
-                        action.type
-                      )}
-                    >
-                      {action.label}
-                    </a>
-=======
                   <Link
                     className={clsx(
                       "link text-black font-bold",
@@ -137,7 +125,6 @@ const Carousel = ({
                     href={action.link}
                   >
                     {action.label}
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                   </Link>
                 ) : (
                   <span

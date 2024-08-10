@@ -185,11 +185,7 @@ const SimpleForm = ({
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-          <div className="form-action mt-5 flex w-full justify-center">
-=======
           <div className="form-action mt-4 flex w-full justify-center">
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
             <Button
               htmlType="submit"
               size={"large"}

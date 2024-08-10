@@ -11,6 +11,7 @@ const CardItem = ({ title, cover, location, actions }: any) => {
   const icon_types: any = {
     ...icons,
   };
+
   return (
     <Card className="pb-4 min-w-md max-w-[400px]">
       <CardHeader className="flex-col items-start w-full h-[200px] p-0 overflow-hidden">
@@ -25,19 +26,14 @@ const CardItem = ({ title, cover, location, actions }: any) => {
       </CardHeader>
       <CardBody className="overflow-visible py-2">
         <h4 className="font-bold text-large pb-1">{title}</h4>
-        <div className="flex flex-col gap-1 pb-1 ">
+        <div className="flex flex-col gap-1 pb-1">
           {location.map((item: any, index: number) => {
             const { children } = item;
+            const IconComponent = icon_types[item.icon];
             return (
               <p key={`${item.label}-${index}`} className="flex gap-1">
                 <span>
-                  {React.createElement(
-                    icon_types[item.icon],
-                    {
-                      ...item,
-                    },
-                    children
-                  )}
+                  {IconComponent && <IconComponent {...item}>{children}</IconComponent>}
                 </span>
                 {item.label}
               </p>
@@ -47,7 +43,7 @@ const CardItem = ({ title, cover, location, actions }: any) => {
         <div className="mt-1">
           {actions.map((action: any, idx: number) => (
             <Button
-              key={`${action}-${idx}`}
+              key={action.label + idx}
               className={clsx(
                 "btn-action px-[32px] py-[17px] w-5/12",
                 action.type || "default",
@@ -56,15 +52,8 @@ const CardItem = ({ title, cover, location, actions }: any) => {
               color={action.type}
             >
               {action.link ? (
-                <Link href={action.link} passHref legacyBehavior>
-                  <a
-                    className={clsx(
-                      "link text-[17px] font-semibold",
-                      action.type
-                    )}
-                  >
-                    {action.label}
-                  </a>
+                <Link href={action.link} passHref>
+                  {action.label}
                 </Link>
               ) : (
                 action.label

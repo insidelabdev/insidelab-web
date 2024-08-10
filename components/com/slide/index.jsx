@@ -145,16 +145,8 @@ const Item = ({ record, size, index, activeDotIndex, ...props }) => {
             <div className="tag rounded-[10px] flex flex-start gap-1 items-center p-[10px]">
               <span
                 className={clsx(
-<<<<<<< HEAD
-                  "tag-label text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] text-[#fff] font-bold tracking-wide transition-all duration-200",
-                  activeDotIndex === index
-                    ? "opacity-100 scale-100"
-                    : "opacity-50 scale-85"
-                )}
-=======
                   "tag-label text-[14px] xs:text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] text-[#fff] font-bold tracking-wide transition-transform duration-200"
                 , activeDotIndex === index ? "scale-100 opacity-100" : "opacity-50 scale-85")}
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
               >
                 {record.tag}
               </span>

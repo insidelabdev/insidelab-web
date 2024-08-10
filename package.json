@@ -6,7 +6,7 @@
     "_dev": "next dev",
     "_start": "next start",
     "start": "NODE_ENV=development && node server.js",
-    "dev": "set NODE_ENV=development && node server.js",
+    "dev": "set NODE_ENV=production && node server.js",
     "build": "next build",
     "lint": "next lint"
   },

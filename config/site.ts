@@ -410,15 +410,9 @@ export const siteConfig = {
                   },
                   {
                     description:
-<<<<<<< HEAD
-                      "Como emprendedor, encontrar un espacio que se adapte a las necesidades cambiantes de mi startup ha sido esencial. Inside Lab no solo ofrece esa flexibilidad, sino que también se encarga de todos los detalles.",
-                    author: "Javier López",
-                    profile: "Emprendedor Tecnológico",
-=======
                       "Inside a sido el lugar en donde hemos podido llevar nuestra agencia de marketing a otro nivel, un lugar que nos da la oportunidad de crecer y contactar con otras personas.",
                     author: "Maria Alejandra Sanchez",
                     profile: "Comunicadora Social",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                     picture: "",
                   },
                 ],
@@ -463,12 +457,8 @@ export const siteConfig = {
                 style: {
                   marginTop: 75,
                 },
-<<<<<<< HEAD
-                size: 580,
-=======
                 itemLayout: "center",
                 size: 600,
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                 title:
                   '<span>"Conectar, Crear y Crecer no debe ser</span> el privilegio de unos, si no la oportunidad de todos"',
                 description: "Founders",
@@ -619,23 +609,16 @@ export const siteConfig = {
             title: "Comunidad Inside",
             elements: [
               {
-<<<<<<< HEAD
-=======
                 src: "/images/wow-pass.png",
               },
               {
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                 src: "/images/1524-agencia.png",
               },
               {
                 src: "/images/checking-travel.png",
               },
               {
-<<<<<<< HEAD
-                src: "/images/checking-travel.png",
-=======
                 src: "/images/Pragma-light.png",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
               },
               {
                 src: "/images/DMJ.png",
@@ -1097,11 +1080,7 @@ export const siteConfig = {
                     title: "FuckUp Night",
                     location: [
                       {
-<<<<<<< HEAD
-                        label: "Por confirmar",
-=======
                         label: "Por confirmar...",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                         icon: "locationicon",
                       },
                       {
@@ -1127,11 +1106,7 @@ export const siteConfig = {
                     title: "FuckUp Night",
                     location: [
                       {
-<<<<<<< HEAD
-                        label: "Por confirmar",
-=======
                         label: "Por confirmar...",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                         icon: "locationicon",
                       },
                       {
@@ -1157,11 +1132,7 @@ export const siteConfig = {
                     title: "FuckUp Night",
                     location: [
                       {
-<<<<<<< HEAD
-                        label: "Por confirmar",
-=======
                         label: "Por confirmar...",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                         icon: "locationicon",
                       },
                       {
@@ -1382,12 +1353,7 @@ export const siteConfig = {
               {
                 name: "form",
                 title: "Contáctanos",
-<<<<<<< HEAD
-                description:
-                  "Conectemos, Creemos y Crezcamos juntos.",
-=======
                 description: "Juntos podemos Crear, Conectar y Crecer",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                 submitButtonText: "Enviar datos",
                 className: "h-full w-full py-6",
                 defaultValues: {
@@ -1437,12 +1403,7 @@ export const siteConfig = {
                   },
                   {
                     name: "terms-of-service",
-<<<<<<< HEAD
-                    label:
-                      "Aceptar los terminos y condiciones de servicio",
-=======
                     label: "Aceptar los terminos y condiciones de servicio",
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
                     labelClassname: "w-fit",
                     xtype: "checkbox",
                     fullWidth: true,
@@ -1456,15 +1417,6 @@ export const siteConfig = {
                 links: [
                   {
                     href: "/docs/terminos-y-condiciones.docx.pdf",
-<<<<<<< HEAD
-                    label: "Terminos y Condiciones"
-                  },
-                  {
-                    href: "/docs/politica-tratamiento-datos.docx.pdf",
-                    label: "Política de Tratamiento de Datos"
-                  }
-                ]
-=======
                     label: "Terminos y Condiciones",
                   },
                   {
@@ -1472,7 +1424,6 @@ export const siteConfig = {
                     label: "Política de Tratamiento de Datos",
                   },
                 ],
->>>>>>> 1cbdeeedb5c4a6bb2cff5309c9ea5ff0fa3bf542
               },
               {
                 name: "map",
