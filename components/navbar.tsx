@@ -75,6 +75,7 @@ export const Navbar = ({ options }: { options: any }) => {
               objectFit="contain"
               objectPosition="center"
               alt="logo"
+              className="main-logo-desktop"
             />
           </Link>
         </NavbarBrand>
