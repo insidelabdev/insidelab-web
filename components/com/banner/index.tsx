@@ -2,8 +2,8 @@ import { Button } from "@nextui-org/button";
 import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
-import { Wrapper } from "./style";
 import * as icons from "@/components/icons";
+import { Wrapper } from "./style";
 
 const Banner = ({ title, description, background, actions, ...props }: any) => {
   const icon_types: any = {
