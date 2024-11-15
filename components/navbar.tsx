@@ -24,8 +24,8 @@ import { siteConfig } from "@/config/site";
 import clsx from "clsx";
 
 import { CalendarIcon, MenuIcon } from "@/components/icons";
-// import Image from "next/image";
-import Image from "@/components/com/image";
+import Image from "next/image";
+// import Image from "@/components/com/image";
 
 import * as icons from "@/components/icons";
 
@@ -192,7 +192,7 @@ export const Navbar = ({ options }: { options: any }) => {
           {navMenu.items.map((item: any, index: number) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               {!item.children ? (
-                <Link href={item.href} size="lg" passHref>
+                <Link href={item.href}  passHref>
                   <div
                     className="text-black font-bold text-[24px] flex justify-between"
                     onClick={() => setIsMenuMobileOpen(false)}

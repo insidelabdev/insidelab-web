@@ -1,8 +1,5 @@
-import React from "react";
-import { Navbar } from "@/components/navbar";
-import Footer from "@/components/com/footer";
 import { siteConfig } from "@/config/site";
-import Cover from "@/components/com/cover";
+import React from "react";
 export const getTemplate = async () => {
   return new Promise((resolve, reject) => {
     try {

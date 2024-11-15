@@ -1,11 +1,11 @@
 import React from "react";
 /* import dynamic from "next/dynamic"; */
-import { siteConfig } from "@/config/site";
 import * as components from "@/components/com";
+import { siteConfig } from "@/config/site";
 import type { ISection, TemplateType } from "@/types";
-import * as layouts from "../layouts";
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
+import * as layouts from "../layouts";
 
 const root_components = ["footer", "cover"];
 export const getTemplate = () => {
@@ -68,11 +68,8 @@ export default async function Page({
   const renderComponent = (components: any[]): any[] => {
     return components.map((component: any) => {
       let { name, children, ...props } = component;
-      //name = typeof component_types[name] !== "undefined" ? name : "list";
       console.log("Component: ", name);
-      // const Component = dynamic(() => import(`@/components/com/${name}`), {
-      //   loading: () => <p>Loading...</p>,
-      // });
+
       if (!component_types[name]) return null;
       return (
         <>
